@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap');
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h2 {
+    font-family: 'Linux Libertine','Georgia','Times',serif;
+    line-height: 1.375;
+    font-weight: normal;
+}
+
+ul { list-style: none; padding-left: 5px; }
+
+a { color:blue; text-decoration: none;}
+
+.bar {
+    background-color: #f9f9fb;
+    padding:15px;
+    border-top: solid 1px #cdcdcd;
+    border-bottom: solid 1px #cdcdcd;
+}
+
+.logo{
+    margin: 10px;
+    display: flex;
+    align-items:center;
+}
+
+.content {
+    max-width: 1620px;
+    margin: auto;
+    grid-gap: 3rem;
+    display: grid;
+    gap: 3rem;
+    grid-template-areas: "sidebar main anchors";
+    grid-template-columns: minmax(0,15rem) minmax(0,2.5fr) minmax(0,15rem);
+}
+
+.content h1{
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+}
+
+.content  p{
+    text-indent: 16px;
+    text-align: justify;
+}
+
+.main{
+    padding: 1rem;
+}
+
+.main table, th, td{
+    text-align: center;
+    border: solid 1px;
+    border-collapse: collapse;
+    padding: 5px;
+}
+
+.anchors {
+    right: 0;
+    border-left: solid 1px #cdcdcd;
+    padding: 1rem;
+}
+
+.anchors ul {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+}
+
+.footer {
+    min-height: 50px;
+    border-top: solid 1px #cdcdcd;
+    text-align: center;
+    font-size: smaller;
+}
+
+.sidebar {
+    border-right: solid 1px #cdcdcd;
+    padding: .5rem;
+}
+
+.avatar-logo{
+    float: left;
+    border: 1px dotted black;
+    margin: 0px 20px 15px 0px;
+}
+
+
+
+
+
+
+
+
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%
+  }
+  
+  /* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+  .sticky + .logo {
+    padding-top: 102px;
+  }
